@@ -27,9 +27,9 @@ class DetailsController {
 
     fun enviarTerreno(terreno: Terreno) {
         this.terreno = terreno
-        lTerreno.text = terreno.nombre
-        lColorTerreno.style = "-fx-background-color: ${terreno.colorTerreno};"
-        lColorTexto.style = "-fx-background-color: ${terreno.colorTexto};"
+        lTerreno.text = "Nombre: "+terreno.nombre
+        lColorTerreno.style = "Color Terreno: "+"-fx-background-color: ${terreno.colorTerreno};"
+        lColorTexto.style =  "Color Texto: "+"-fx-background-color: ${terreno.colorTexto};"
         val f = File(terreno.imagen)
         lImagen.image = Image(f.toURI().toURL().toString())
         if (terreno.sePuedeAndarSobreEl) {
@@ -74,30 +74,32 @@ class DetailsController {
         this.mapController = mapController
     }
 
-    fun presionaBoton1() {
+    fun onClikedBoton1() {
+
        when ( boton1.text ) {
            "Crear Granja" -> {
                imagen2.image = Image(granja.toURI().toURL().toString())
                terreno?.nombre = Terreno.CON_GRANJA
-               mapController?.recopiar()
+               mapController?.miPosiActual()
            }
            "Saquear" -> {
                imagen2.image = Image(saquear.toURI().toURL().toString())
                terreno?.nombre = Terreno.SAQUEADO
-               mapController?.recopiar()
+               mapController?.miPosiActual()
            }
            "Crear mina" -> {
                imagen2.image = Image(mina.toURI().toURL().toString())
                terreno?.nombre = Terreno.CON_MINA
-               mapController?.recopiar()
+               mapController?.miPosiActual()
            }
        }
     }
-    fun presionaBoton2() {
+    fun onClickedBoton2() {
+
         if (boton2.text == "Conquistar") {
             imagen2.image = Image(conquistar.toURI().toURL().toString())
             terreno?.nombre = Terreno.CONQUISTADO
-            mapController?.recopiar()
+            mapController?.miPosiActual()
         }
 
     }

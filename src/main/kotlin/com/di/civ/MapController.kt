@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader
 import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.Scene
+import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
@@ -16,6 +17,7 @@ import java.io.File
 class MapController {
 
     lateinit var root : GridPane
+    lateinit var boton : Button
     lateinit var posicion: Label
     lateinit var labelTerreno: Label
     private val mapa = Mapa()
@@ -40,9 +42,7 @@ class MapController {
         root.vgap = 5.0
         root.padding = Insets(50.0, 50.0, 50.0, 50.0)
     }
-    fun recopiar() {
-        rellenarGirdPaneConMapa(subMapa)
-    }
+
     private fun rellenarGirdPaneConMapa(subMapa: MutableList<MutableList<Terreno>>) {
         var pos = 0
         subMapa.forEach { terrenos ->
@@ -101,6 +101,12 @@ class MapController {
         println("moverDerecha")
         mapa.moverDerecha()
         rellenarGirdPaneConMapa(mapa.obtenerSubMapa())
+        mostrarPosicionActual()
+    }
+
+    fun miPosiActual(){
+        subMapa = mapa.obtenerSubMapa()
+        rellenarGirdPaneConMapa(subMapa)
         mostrarPosicionActual()
     }
 

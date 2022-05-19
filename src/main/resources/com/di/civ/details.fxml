@@ -10,7 +10,7 @@
    <ImageView fx:id="lImagen" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
    <Label fx:id="lColorTexto" layoutX="235.0" layoutY="78.0" text="Color Texto" />
    <Label fx:id="lTransitable" layoutX="235.0" layoutY="103.0" text="Transitable" />
-   <Button fx:id="boton2" focusTraversable="false" layoutX="308.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#presionaBoton2" text="Button" />
-   <Button fx:id="boton1" focusTraversable="false" layoutX="235.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#presionaBoton1" text="Button" />
+   <Button fx:id="boton2" focusTraversable="false" layoutX="308.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#onClickedBoton2" text="Button" />
+   <Button fx:id="boton1" focusTraversable="false" layoutX="235.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#onClikedBoton1" text="Button" />
    <ImageView fx:id="imagen2" fitHeight="112.0" fitWidth="124.0" layoutX="368.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
 </AnchorPane>
