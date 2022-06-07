@@ -11,7 +11,7 @@ class Mapa {
     var matriz = MutableList(Configuracion.filasMapa) {
         MutableList(Configuracion.columnasMapa) {
 
-            when (Random.nextInt(0, 100)) {
+            val terreno = when (Random.nextInt(0, 100)) {
                 in 0..24 -> Terreno.crearLlanura()
                 in 25..44 -> Terreno.crearColina()
                 in 45..64 -> Terreno.crearBosque()
@@ -20,6 +20,16 @@ class Mapa {
                 in 90..99 -> Terreno.crearMontana()
                 else -> Terreno.crearTerrenoDesconocido()
             }
+            if(terreno.sePuedeAndarSobreEl)
+            terreno.unidad = when(Random.nextInt(1,4)) {
+                1 -> Unidad.crearCaballero()
+                2 -> Unidad.crearGuerrero()
+                3 -> Unidad.crearLancero()
+                else -> {null}
+            }
+
+
+            terreno
         }
     }
 

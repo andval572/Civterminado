@@ -13,4 +13,7 @@
    <Button fx:id="boton2" focusTraversable="false" layoutX="308.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#onClickedBoton2" text="Button" />
    <Button fx:id="boton1" focusTraversable="false" layoutX="235.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#onClikedBoton1" text="Button" />
    <ImageView fx:id="imagen2" fitHeight="112.0" fitWidth="124.0" layoutX="368.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fx:id="imagen3" fitHeight="48.0" fitWidth="58.0" layoutX="234.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true" />
+   <Label fx:id="lUnidad" layoutX="310.0" layoutY="177.0" text="Label" />
+   <Label fx:id="lVida" layoutX="310.0" layoutY="201.0" text="Label" />
 </AnchorPane>
